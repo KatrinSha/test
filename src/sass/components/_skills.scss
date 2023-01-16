@@ -1,0 +1,133 @@
+.skills__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.skills__title {
+    background-color: $additional-color;
+    margin-bottom: 20px;
+    margin-top: 60px;
+    padding: 0 5px;
+}
+
+.skills__title-big {
+    margin-bottom: 40px;
+}
+
+.skills__cards {
+    width: 100%;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+    background: url("../img/icons/cat_tracks.svg") right 100px bottom no-repeat;
+
+}
+
+.skills_container:hover .skills__card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+
+.skills__card {
+    height: 500px;
+    max-width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+
+}
+
+.skills__card-front,
+.skills__card-back {
+    width: 100%;
+    height: 100%;
+    //border:2px solid  $additional-color;
+    //border-radius: 10px/20px;
+    //box-shadow: 0 0 5px 2px rgba($color: #b8a60b, $alpha: 0.8);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+
+
+.skills__card_title {
+    color: $white-color;
+    margin: 110px 0 0 40px;
+}
+
+.skills__card-back {
+    transform: rotateY(180deg);
+
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 0 10px 5px rgba($color: #939597, $alpha: 0.3);
+    background-color: white;
+
+}
+
+.hard-skill {
+    background: url("../img/background/lamp.jpg") top;
+}
+
+.soft-skill {
+    background: url("../img//background/yellow_constr.jpg") top;
+
+    & .skills__card_title {
+        color: $main-color;
+
+    }
+
+    //& +.skills__card-back{
+    //   background: url("/src/img/icons/pexels-tirachard-kumtanom-584305.jpg") no-repeat;
+    //  background-size: contain;
+    //  }
+}
+
+.skills-list {
+    margin-right: 0;
+    border-left: 3px solid $additional-color;
+    border-bottom: 3px solid $additional-color;
+    box-shadow: -1px 1px 2px 0px rgba($color: #f5df4e, $alpha: 0.8);
+
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.skills-list__item {
+
+    padding-top: 20px;
+    font-size: 2.1rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $additional-color;
+}
+
+.skills__download-button {
+
+    padding: 15px 40px;
+    border: 2px solid $main-color;
+    border-radius:10px;
+    border-bottom: 3px solid;
+   
+
+
+    & a {
+        display: block;
+        text-decoration: none;
+        color: $main-color;
+        width: 100%;
+    }
+}

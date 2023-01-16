@@ -1,0 +1,53 @@
+.welcome{
+    height: 100vh;
+}
+
+.welcome__wrapper {
+    background: url("../img/background/it_cat.jpg") no-repeat;
+    background-position: center -80px;
+    position: relative;
+    z-index: -2;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover; 
+}
+
+.welcome_content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50vh;
+
+
+}
+
+.welcome-title {
+    @include font(4.0rem, 120%, 600);
+    color: $text-light;
+}
+
+.welcome__printed-text {
+    width: 27ch;
+    @include font(5.5rem, 120%, 600);
+    color: $text-light;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #f5df4e;
+    animation: flashing-cursor 0.75s step-end infinite, printed-text 8s steps(27);
+}
+
+.welcome__button {
+
+    margin-left: calc((1024px - 50px) / 2);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba($color: #212529, $alpha: 0.3);
+    //box-shadow: 0 0 15px 2px #dee3e4;
+    position: absolute;
+    bottom: 20px;
+    animation: swipe-arrow 1s ease infinite;
+}

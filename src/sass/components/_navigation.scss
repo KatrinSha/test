@@ -1,0 +1,17 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-top: 9px;
+    cursor: pointer;
+
+}
+.navigation__link{
+    display: block;
+    align-items: center;
+    transition: all 0.5s 0;
+    @include font(1.8rem, 120%, 600);
+    &:hover{
+        color:$additional-color;
+    }
+}

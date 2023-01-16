@@ -1,0 +1,23 @@
+.header {
+    background-color: transparent;
+    padding: 20px 0px 20px 0px;
+    color: $text-light;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header__logo-line {
+    height: 40px;
+    align-self: center;
+}
+
+.header__navigation {
+    padding: 0;
+}

@@ -1,0 +1,23 @@
+html {
+    font-size: 10px;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    @include font($size: 1.6rem, $height: 120%);
+}
+
+h1 {
+    @include font($size: 4.0rem, $height: 120%);
+}
+
+h2 {
+    @include font($size: 4.0rem, $height: 120%, $weight: 600);
+}
+
+h3 {
+    @include font($size: 1.6rem, $height: 180%, $weight: 500);
+}
+
+//Изображение от <a href="https://ru.freepik.com/free-photo/close-up-portrait-on-beautiful-cat_21194192.htm#query=cat%20and%20computer&position=49&from_view=search&track=ais#position=49&query=cat%20and%20computer">Freepik</a>

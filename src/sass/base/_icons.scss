@@ -1,0 +1,65 @@
+.logo-object {
+    height: 40px;
+
+}
+
+.ico {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.ico_arrow {
+    background-image: url("../img/icons/arrow_s.svg");
+    background-repeat: no-repeat;
+z-index: 6;
+    width: 36px;
+    height: 20px;
+    transform: rotate(90deg);
+
+}
+
+.ico_phone {
+    background-image: url("../img/icons/mobile-phone-signal.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 80%;
+}
+
+.ico_email {
+    background-image: url("../img/icons/mail.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 2px;
+    left: 80%;
+}
+
+.ico_link {
+    background-image: url("../img/icons/linkedin.svg");
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 10px;
+    left: 80%;
+}
+
+.footer__button {
+    & .ico_arrow {
+        transform: rotate(270deg);
+        position: relative;
+        top: 14px;
+        left: 7px;
+
+    }
+}
+
+.ico_git {
+    background-image: url("../img/icons/github.svg");
+    width: 60px;
+    height: 60px; 
+}

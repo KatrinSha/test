@@ -1,0 +1,72 @@
+.about__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    background: url("../img/background/oval.png") right 5px bottom 120px no-repeat;
+}
+
+.about__title {
+    background-color: $additional-color;
+    margin-bottom: 20px;
+    padding: 0 5px;
+}
+.about__title-big{
+    margin-bottom: 40px;
+}
+.about_desc_text{
+    @include font(2.1rem, 180%, 400);
+}
+
+.about__description {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+   }
+
+.about__desc {
+    margin-right: 30px;
+    flex-basis: 75%;
+}
+
+.about__photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+}
+
+.about_desc_title {
+    @include font(3.2rem, 120%, 400);
+    margin-bottom: 20px;
+     & span {
+        @include font(3.2rem, 120%, 700);
+        border-bottom: 4px solid $additional-color;
+    }
+}
+
+
+.about__info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+   // justify-items: center;
+   margin-bottom:80px;
+}
+._info-box_title{
+    color: $text-grey;
+}
+._info-box_text{
+    @include font(1.8rem, 120%, 600);
+}

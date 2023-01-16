@@ -1,0 +1,29 @@
+.footer{
+    background-color: $main-color;
+   
+
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $white-color;
+    font-size: 1.8rem;
+    height: 80px;
+    padding: 10px 0;
+    position: relative;
+}
+.footer__button{
+    margin-left: calc((1024px - 50px) / 2);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba($color:$text-light, $alpha: 0.1);
+   box-shadow: 0 0 15px 1px $text-light;
+   position: absolute;
+   top:10px;
+
+
+    animation: swipe-arrow-top 1s ease infinite;
+}
