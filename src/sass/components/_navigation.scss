@@ -5,13 +5,46 @@
     margin-top: 9px;
     cursor: pointer;
 
+    @include media-laptop {
+        width: 500px;
+    }
+
+    @include media-tablet {
+        width: fit-content;
+        padding: 10px;
+        align-items: center;
+        background-color: rgba($color: #212529, $alpha: 0.3);
+        flex-direction: column;
+        position: absolute;
+        left:50vw;
+       display: none;
+        transform: translateX(-50%);
+        transition: all 0.5s 0;
+        &.active {
+            left: 50vw;
+            display: block;
+        }
+    }
+
 }
-.navigation__link{
+
+.navigation__link {
     display: block;
     align-items: center;
     transition: all 0.5s 0;
     @include font(1.8rem, 120%, 600);
-    &:hover{
-        color:$additional-color;
+
+    &:hover {
+        color: $additional-color;
     }
+
+    @include media-laptop {
+        @include font(1.8rem, 120%, 400);
+    }
+    @include media-tablet{
+        @include font(1.6rem, 120%, 400);
+        margin-bottom: 7px;
+    }  
+
+
 }

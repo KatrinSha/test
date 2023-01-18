@@ -51,3 +51,15 @@
         top: 10px;
     }
 }
+@keyframes swipe-arrow-tablet{
+    0% {
+        top:430px;
+    }
+
+    60% {
+        top:440px;
+    }
+    100% {
+        top:430px;
+    }
+}

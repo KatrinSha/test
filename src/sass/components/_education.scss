@@ -11,31 +11,46 @@
     margin-bottom: 20px;
     margin-top: 60px;
     padding: 0 5px;
+    @include media-tablet{
+        @include font(1.4rem, 120%, 400);
+        margin-top: 30px;
+    }
 }
 
 .education__title-big {
     margin-bottom: 40px;
-    color: white;
+    color: white;   
+    @include media-tablet{
+        @include font(2.4rem, 120%, 400);
+        margin-bottom: 20px;
+    }
+    @include media-mobile{
+       text-align: center;
+    }
 }
 
 .education__slider {
-    width:55%;
-    height: 400px;
+    width: 80%;
+    height: auto;
     overflow: hidden;
+    @include media-tablet{
+        width: 80%;
+     
+    }
 }
 
 .education__slider-line {
     display: flex;
-   // width: 3600px;
+    // width: 3600px;
     position: relative;
-   // left: -2700px;
+    // left: -2700px;
     transition: all ease 1s;
 }
 
 ._slider-box {
     padding: 0 30px;
-   // width: 900px;
-    height:400px;
+    width: 900px;
+    height: auto;
     border: 4px solid $additional-color;
     border-top: none;
     border-bottom: none;
@@ -44,67 +59,118 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include media-tablet{
+        padding: 0 5px;
+      
+ 
+    }
 
 }
-._slider-box_bntu{
+
+._slider-box_bntu {
     background: url("../img/icons/graduation-cap.svg") right 50% bottom 15px no-repeat;
+    @include media-mobile{
+        background: none;
+    }
 }
-._slider-box_academy{
+
+._slider-box_academy {
     background: url("../img/icons/certificate.svg") right 50% bottom -15px no-repeat;
+    @include media-tablet{
+        background: none;
+    }
 }
+
 ._slider-box_title {
     @include font(2.5rem, 120%, 600);
     color: $additional-color;
+
+    @include media-laptop {
+        @include font(2.2rem, 120%, 500);
+        text-align: center
+    }
+    @include media-tablet {
+        @include font(1.6rem, 120%, 500);
+        text-align: center
+    }
+    @include media-mobile {
+        padding: 0 15px;
+        @include font(1.4rem, 120%, 500);
+        text-align: center
+    }
 }
 
 .slider-box_term {
     @include font(1.4rem, 120%, 400, italic);
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    @include media-laptop {
+        @include font(1.2rem, 180%, 400);
+    }
+    @include media-mobile{
+        @include font(1.0rem, 180%, 400);
+        margin-bottom:5px;
+    }
 }
 
 .slider-box_info {
     @include font(2.1rem, 180%, 400);
     text-align: center;
+
+    @include media-laptop {
+        @include font(1.6rem, 180%, 400);
+    }
+ @include media-mobile{
+    @include font(1.1rem, 120%, 400);
+ }
 }
 
-.fa-paw {
-    margin-right: 5px;
-}
-.info-list_item{
-    list-style:circle inside;
-}
-//.info-list_item::before {
-       // content:  url("/src/img/icons/thumbtack-svgrepo-com.svg");
-      //  //display: block;
-       // position: absolute;
-       //left: 10px;
-    // transform: translate(-28px,-3px) rotate(-30deg);
-//}
-.slider__butto-box{
-  display: flex;
-  margin-top: 50px;
-  margin-bottom: 80px;
+._slider-box_text{
+    @include media-tablet {
+        @include font(1.4rem, 120%, 500);
+        text-align: center
+    }
 }
 
-.slider-button{
+.info-list_item {
+    list-style: circle inside;
+}
+
+.slider__button-box {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    @include media-tablet{
+        width: 45%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+}
+
+.slider-button {
     position: relative;
-	padding: 10px 20px;
+    padding: 10px 20px;
     margin: 0px 10px 10px 0px;
-	border-radius: 10px;
-    color:white;
-    background-color:rgba($color: #939597, $alpha: 0.8);
+    border-radius: 10px;
+    color: white;
+    background-color: rgba($color: #939597, $alpha: 0.8);
     border: 1px solid $additional-color;
-	border-bottom: 3px solid $additional-color;
-   
+    border-bottom: 3px solid $additional-color;
+    @include media-mobile{
+        padding: 5px 10px;
+        font-size: 1.0rem;
 }
-.slider_button-prev{
-   // box-shadow: -2px 2px 5px $additional-color;
-} 
-.slider_button-next{
-  //  box-shadow: 2px 2px 5px $additional-color;
-} 
-.slider-button:active
-{
-	transform: translate(0px,5px);
-	border-bottom: 1px solid;
+}
+
+.slider_button-prev {
+    // box-shadow: -2px 2px 5px $additional-color;
+}
+
+.slider_button-next {
+    //  box-shadow: 2px 2px 5px $additional-color;
+}
+
+.slider-button:active {
+    transform: translate(0px, 5px);
+    border-bottom: 1px solid;
 }

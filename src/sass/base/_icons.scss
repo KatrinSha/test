@@ -11,41 +11,49 @@
 .ico_arrow {
     background-image: url("../img/icons/arrow_s.svg");
     background-repeat: no-repeat;
-z-index: 6;
+    z-index: 6;
     width: 36px;
     height: 20px;
     transform: rotate(90deg);
+    @include media-mobile{
+        background-size: cover; 
+        width: 18px;
+        height: 10px;
+    }
 
 }
 
 .ico_phone {
     background-image: url("../img/icons/mobile-phone-signal.svg");
     background-repeat: no-repeat;
+    background-size: cover; 
     width: 60px;
     height: 60px;
     position: absolute;
     top: 10px;
-    left: 80%;
+
 }
 
 .ico_email {
     background-image: url("../img/icons/mail.svg");
     background-repeat: no-repeat;
+    background-size: cover; 
     width: 60px;
     height: 60px;
     position: absolute;
-    top: 2px;
-    left: 80%;
+    top: 5px;
+
 }
 
 .ico_link {
     background-image: url("../img/icons/linkedin.svg");
     background-repeat: no-repeat;
+    background-size: cover; 
     width: 60px;
     height: 60px;
     position: absolute;
     top: 10px;
-    left: 80%;
+
 }
 
 .footer__button {
@@ -54,12 +62,22 @@ z-index: 6;
         position: relative;
         top: 14px;
         left: 7px;
-
+        @include media-tablet{
+            background-size: cover; 
+            width: 18px;
+            height: 10px;
+            top: 8px;
+        }
     }
 }
 
 .ico_git {
     background-image: url("../img/icons/github.svg");
+    background-size: cover; 
     width: 60px;
     height: 60px; 
+    @include media-tablet{
+        width: 30px;
+        height: 30px; 
+    }
 }

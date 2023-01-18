@@ -5,17 +5,33 @@
     position: fixed;
     width: 100%;
     z-index: 2;
+    @include media-tablet{
+        padding: 10px 0px 10px 0px;
+        width: 100vw;
+    }
+    @include media-mobile {
+   padding: 0;
+    }
 }
 
 .header__wrapper {
     display: flex;
     justify-content: space-between;
-
+    @include media-tablet{
+      justify-content: flex-end;
+      margin: 0;
+    }
 }
 
 .header__logo-line {
     height: 40px;
     align-self: center;
+    @include media-tablet{
+        display: none;
+    }
+    @include media-mobile {
+        height: 0px;
+         }
 }
 
 .header__navigation {

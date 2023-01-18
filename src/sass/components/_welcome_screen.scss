@@ -1,15 +1,28 @@
-.welcome{
+.welcome {
     height: 100vh;
+
+    @include media-tablet {
+        height: fit-content;
+    }
 }
 
 .welcome__wrapper {
     background: url("../img/background/it_cat.jpg") no-repeat;
     background-position: center -80px;
-    position: relative;
-    z-index: -2;
-    height: 100%;
     background-attachment: fixed;
-    background-size: cover; 
+    background-size: cover;
+    height: 100%;
+    z-index: -2;
+    position: relative;
+
+    @include media-tablet {
+        background: url("../img/background/it_cat_tablet.jpg") no-repeat;
+        background-position: left -5px;
+    }
+    @include media-mobile{
+        background: url("../img/background/it_cat_m.jpg") no-repeat;
+        background-position: left -5px;
+    }
 }
 
 .welcome_content {
@@ -19,12 +32,25 @@
     align-items: center;
     padding-top: 50vh;
 
-
+    @include media-tablet {
+        padding-top: 240px;
+        padding-bottom: 200px;
+    }
 }
 
 .welcome-title {
     @include font(4.0rem, 120%, 600);
     color: $text-light;
+
+    @include media-laptop {
+        @include font(3.0rem, 120%, 600);
+    }
+    @include media-tablet {
+        @include font(1.8rem, 120%, 500);
+    }
+    @include media-mobile {
+        @include font(1.6rem, 120%, 500);
+    }
 }
 
 .welcome__printed-text {
@@ -35,19 +61,39 @@
     white-space: nowrap;
     overflow: hidden;
     border-right: 4px solid #f5df4e;
-    animation: flashing-cursor 0.75s step-end infinite, printed-text 8s steps(27);
+
+     animation: flashing-cursor 0.75s step-end infinite, printed-text 8s steps(27);
+    @include media-laptop {
+        @include font(4.8rem, 120%, 600);
+    }
+
+    @include media-tablet {
+        @include font(2.8rem, 120%, 600);
+    }
+    @include media-mobile {
+        @include font(2.0rem, 120%, 600);
+    }
 }
 
 .welcome__button {
-
-    margin-left: calc((1024px - 50px) / 2);
+    margin-left: calc((100vw - 50px) / 2);
     height: 50px;
     width: 50px;
     border-radius: 50%;
     border: none;
     background-color: rgba($color: #212529, $alpha: 0.3);
-    //box-shadow: 0 0 15px 2px #dee3e4;
+    box-shadow: 0 0 15px 2px #dee3e4;
     position: absolute;
     bottom: 20px;
     animation: swipe-arrow 1s ease infinite;
+
+    @include media-tablet {
+        top: 430px;
+        animation: swipe-arrow-tablet 1s ease infinite;
+    }
+    @include media-mobile{
+        margin-left: calc((100vw - 30px) / 2);
+        height: 30px;
+        width: 30px;
+    }
 }

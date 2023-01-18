@@ -1,45 +1,120 @@
-.contacts{
-  margin-bottom: 80px;
+.contacts {
+    margin-bottom: 80px;
 }
 
 
-.contacts__wrapper{
+.contacts__wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-   
+
 }
 
 .contacts__title {
     background-color: $additional-color;
     margin-bottom: 20px;
     padding: 0 5px;
+
+    @include media-tablet {
+        @include font(1.4rem, 120%, 400);
+        margin-top: 30px;
+    }
 }
-.contacts__title-big{
+
+.contacts__title-big {
     margin-bottom: 40px;
+
+    @include media-tablet {
+        @include font(2.4rem, 120%, 400);
+        margin-bottom: 20px;
+    }
 }
-.contacts-list{
+
+.contacts-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     width: 100%;
+    grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    
-    
+    align-items: center;
+
+    @include media-laptop {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include media-tablet {
+        grid-template-columns: repeat(3, 30%);
+        gap: 5%;
+     
+    }
 }
-.contacts-list__item{
+
+.contacts-list__item {
     border: 1px solid $text-grey;
     height: 120px;
-    color:$text-grey;
+    color: $text-grey;
     position: relative;
     padding: 20px;
+
+    @include media-laptop {
+        padding: 10px;
+        height: fit-content;
+    }
+    @include media-tablet {
+        padding: 10px;
+        height: 90px;
+    }
+    @include media-mobile{
+        border-radius: 50%;
+    }
 }
-.__item_title{
+
+.__item_title {
     color: $text-grey;
+    @include media-mobile{
+        display: none;
+    }
 }
-.__item_text{
+
+.__item_text {
     display: block;
     @include font(1.8rem, 120%, 600);
     color: black;
     margin-top: 20px;
+
+    @include media-laptop {
+        @include font(1.5rem, 120%, 600);
+        word-wrap: break-word;
+    }
+    @include media-tablet{
+        @include font(1.2rem, 120%, 500);
+        margin-top: 10px;
+    }
+    @include media-mobile{
+        display: none;
+    }
+}
+
+a.contacts-ico {
+    left: 80%; 
+    @include media-laptop {
+       width: 50px;
+      height: 50px;
+    }
+
+    @include media-laptop {
+      
+    }
+    @include media-tablet {
+        left: 70%; 
+        width: 30px;
+        height: 30px;
+    }
+    @include media-mobile{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+    }
 }
